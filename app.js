@@ -4,11 +4,9 @@ import Router from "./routes.js"
 
 const app = express();
 
-const PORT = 8000
-
 app.use("/", Router)
 
-app.listen(PORT, async () => {
+app.listen(process.env.PORT || 8000, async () => {
   console.log('====================================');
   console.log(`Server is listening on port ${PORT}`);
   console.log('====================================');
