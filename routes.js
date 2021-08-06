@@ -3,7 +3,7 @@ import fivem from "fivem-server-stats";
 const Router = express.Router();
 
 Router.get("/", (req,res) => {
-  res.send("This is working")
+  res.send("Welcome to fiveM server stats")
 })
 
 Router.get("/info", async (req,res) => {
