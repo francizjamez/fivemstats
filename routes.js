@@ -8,19 +8,41 @@ Router.get("/", (req,res) => {
 
 Router.get("/info", async (req,res) => {
   const {ip, port} = req.query;
-  const infoRes = await fivem.getInfo(`${ip}:${port}`);
-  res.send(infoRes)
+
+  if(!ip || !!port){
+
+    res.send("send an ip and a port as a query")
+  }
+  else{
+    const infoRes = await fivem.getInfo(`${ip}:${port}`);
+    res.send(infoRes)
+  }
+
 })
 
 Router.get("/players", async (req,res) => {
   const {ip, port} = req.query;
-  const playerRes = await fivem.getPlayers(`${ip}:${port}`);
+  if(!ip || !!port){
+
+    res.send("send an ip and a port as a query")
+  }
+  else{
+    const playerRes = await fivem.getPlayers(`${ip}:${port}`);
   res.send(playerRes)
+  }
+
 })
 Router.get("/playercount", async (req,res) => {
   const {ip, port} = req.query;
-  const countRes = await fivem.getPlayerLength(`${ip}:${port}`);
-  res.send(countRes)
+  if(!ip || !!port){
+
+    res.send("send an ip and a port as a query")
+  }
+  else{
+    const countRes = await fivem.getPlayerLength(`${ip}:${port}`);
+    res.send(countRes)
+  }
+
 })
 
 export default Router;

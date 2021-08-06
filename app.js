@@ -11,5 +11,3 @@ app.listen(process.env.PORT || 8000, async () => {
   console.log(`Server is listening on port ${PORT}`);
   console.log('====================================');
 })
-
-
