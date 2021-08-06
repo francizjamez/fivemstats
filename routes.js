@@ -9,8 +9,7 @@ Router.get("/", (req,res) => {
 Router.get("/info", async (req,res) => {
   const {ip, port} = req.query;
 
-  if(!ip || !!port){
-
+  if(!ip || !port){
     res.send("send an ip and a port as a query")
   }
   else{
@@ -22,7 +21,7 @@ Router.get("/info", async (req,res) => {
 
 Router.get("/players", async (req,res) => {
   const {ip, port} = req.query;
-  if(!ip || !!port){
+  if(!ip || !port){
 
     res.send("send an ip and a port as a query")
   }
@@ -34,7 +33,7 @@ Router.get("/players", async (req,res) => {
 })
 Router.get("/playercount", async (req,res) => {
   const {ip, port} = req.query;
-  if(!ip || !!port){
+  if(!ip || !port){
 
     res.send("send an ip and a port as a query")
   }
